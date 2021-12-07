@@ -17,17 +17,16 @@ public class Main {
   }
 
   private static String threeDigits(int n) {
-    double value = Math.pow(3 + Math.sqrt(5), n);
-    int floor = (int) Math.floor(value);
-    String number = String.valueOf(floor);
+    int value = (int) Math.pow(3 + Math.sqrt(5), n);
+    String stringNumber = String.valueOf(value);
 
-    if (floor >= 100) {
-      return number.substring(number.length() - 3);
+    if (value >= 100) {
+      return stringNumber.substring(stringNumber.length() - 3);
     }
 
-    while (number.length() < 3) {
-      number = "0".concat(number);
+    while (stringNumber.length() < 3) {
+      stringNumber = "0".concat(stringNumber);
     }
-    return number;
+    return stringNumber;
   }
 }
